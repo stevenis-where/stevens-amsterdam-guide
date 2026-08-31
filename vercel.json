@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/events/worldpride-2026/",
+      "destination": "/",
+      "permanent": false
+    },
+    {
       "source": "/events/worldpride-2026/:path*",
       "destination": "/",
       "permanent": false
