@@ -296,7 +296,7 @@
     const groups = [
       { title: "Serious club nights", test: (event) => event.eventType === "Club night", limit: 4 },
       { title: "Joyful, social, and diasporic", test: (event) => ["Pop party", "Queer diaspora party", "Party", "Circuit party"].includes(event.eventType), limit: 2 },
-      { title: "Culture and public Pride", test: (event) => ["Community / culture", "Public programme", "Performance", "Concert / festival"].includes(event.eventType), limit: 2 }
+      { title: "Culture and public programme", test: (event) => ["Community / culture", "Public programme", "Performance", "Concert / festival"].includes(event.eventType), limit: 2 }
     ];
     grid.innerHTML = groups.map((group) => {
       const events = pool.filter(group.test).slice(0, group.limit);
@@ -404,7 +404,7 @@
       confidenceLabel: confidence === "High" ? "Verified" : "Check details",
       dateDisplay,
       rating,
-      rationale: row.rating_rationale || row.notes || "A Pride-week event to consider if the timing, crowd, and venue fit the night.",
+      rationale: row.rating_rationale || row.notes || "An event to consider if the timing, crowd, and venue fit the night.",
       note: row.notes || row.rating_rationale || "Open the event page before booking.",
       detailsUrl: row.details_url || "",
       ticketUrl: row.ticket_url || "",
@@ -443,11 +443,11 @@
     const now = new Date();
     const year = now.getFullYear();
     const steps = [
-      { date: new Date("2026-07-17T00:00:00"), title: "Book the scarce nights first", copy: "Start with RAUM, Tilla Tec, Lofi, and RADION tickets, then double-check times and lineups before you make plans." },
-      { date: new Date("2026-07-25T00:00:00"), title: "Lock the opening weekend", copy: "Choose your 25 July opener and keep the official programme beside the party list for daytime plans." },
-      { date: new Date("2026-07-31T00:00:00"), title: "Canal weekend logistics", copy: "Confirm street-party routes, late-night tickets, bike or tram plans, and where your group regroups after crowds split." },
-      { date: new Date("2026-08-07T00:00:00"), title: "Choose the closing arc", copy: "The close is dense: compare Bashkka, Tilla Tec, IsBurning, GEGEN, and official closing plans before overcommitting." },
-      { date: new Date("2026-08-09T00:00:00"), title: "After WorldPride", copy: "Keep using the city guide for neighborhoods, food, drinks, museums, parks, and calmer Amsterdam plans." }
+      { date: new Date("2026-07-17T00:00:00"), title: "Book the scarce nights first", copy: "Start with the limited-capacity club and performance tickets, then double-check times and lineups before you make plans." },
+      { date: new Date("2026-07-25T00:00:00"), title: "Lock the opening weekend", copy: "Choose the opener and keep the public programme beside the party list for daytime plans." },
+      { date: new Date("2026-07-31T00:00:00"), title: "Weekend logistics", copy: "Confirm routes, late-night tickets, bike or tram plans, and where your group regroups after crowds split." },
+      { date: new Date("2026-08-07T00:00:00"), title: "Choose the closing arc", copy: "Compare the strongest late-weekend options before overcommitting." },
+      { date: new Date("2026-08-09T00:00:00"), title: "After the edition", copy: "Keep using the city guide for neighborhoods, food, drinks, museums, parks, and calmer Amsterdam plans." }
     ];
 
     if (year !== 2026) return;

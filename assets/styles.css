@@ -27,8 +27,8 @@
   --serif: "Fraunces", Georgia, serif;
 }
 
-/* Editions share layout and components; each route supplies only theme tokens. */
-body[data-edition="worldpride"] {
+/* Editions share layout and components; future routes can supply their own tokens. */
+body[data-edition="event"] {
   --ink: #29212f;
   --muted: #716775;
   --paper: #f8f4f7;
@@ -283,7 +283,6 @@ input:focus-visible {
 }
 
 .event-hero {
-  background-image: url("./images/worldpride-hero.jpg");
   background-position: center 64%;
 }
 
@@ -463,6 +462,7 @@ input:focus-visible {
 }
 
 .route-grid,
+.month-grid,
 .practical-list,
 .official-grid {
   display: grid;
@@ -477,6 +477,7 @@ input:focus-visible {
 }
 
 .text-card,
+.month-card,
 .route-card,
 .practical-list article,
 .source-card,
@@ -620,6 +621,7 @@ input:focus-visible {
 }
 
 .place-card,
+.month-card,
 .event-card {
   position: relative;
   display: flex;
@@ -673,9 +675,15 @@ input:focus-visible {
 }
 
 .place-card h3,
+.month-card h3,
 .event-card h3 {
   margin-top: 0.9rem;
   font-size: 1.28rem;
+}
+
+.month-card .mini-link {
+  width: fit-content;
+  margin-top: auto;
 }
 
 .card-actions {
@@ -857,45 +865,45 @@ input:focus-visible {
   font-size: 0.95rem;
 }
 
-body[data-edition="worldpride"] .section .eyebrow,
-body[data-edition="worldpride"] .section-kicker,
-body[data-edition="worldpride"] .pick-group > h3 {
+body[data-edition="event"] .section .eyebrow,
+body[data-edition="event"] .section-kicker,
+body[data-edition="event"] .pick-group > h3 {
   color: var(--rose);
 }
 
-body[data-edition="worldpride"] .event-frame .practical-list article,
-body[data-edition="worldpride"] .date-card,
-body[data-edition="worldpride"] .event-card {
+body[data-edition="event"] .event-frame .practical-list article,
+body[data-edition="event"] .date-card,
+body[data-edition="event"] .event-card {
   border-top: 7px solid var(--coral);
 }
 
-body[data-edition="worldpride"] .event-frame .practical-list article:nth-child(3n + 2),
-body[data-edition="worldpride"] .date-card:nth-child(5n + 2),
-body[data-edition="worldpride"] .event-card:nth-child(5n + 2) {
+body[data-edition="event"] .event-frame .practical-list article:nth-child(3n + 2),
+body[data-edition="event"] .date-card:nth-child(5n + 2),
+body[data-edition="event"] .event-card:nth-child(5n + 2) {
   border-top-color: var(--blue);
 }
 
-body[data-edition="worldpride"] .event-frame .practical-list article:nth-child(3n),
-body[data-edition="worldpride"] .date-card:nth-child(5n + 3),
-body[data-edition="worldpride"] .event-card:nth-child(5n + 3) {
+body[data-edition="event"] .event-frame .practical-list article:nth-child(3n),
+body[data-edition="event"] .date-card:nth-child(5n + 3),
+body[data-edition="event"] .event-card:nth-child(5n + 3) {
   border-top-color: var(--yellow);
 }
 
-body[data-edition="worldpride"] .date-card:nth-child(5n + 4),
-body[data-edition="worldpride"] .event-card:nth-child(5n + 4) {
+body[data-edition="event"] .date-card:nth-child(5n + 4),
+body[data-edition="event"] .event-card:nth-child(5n + 4) {
   border-top-color: var(--green);
 }
 
-body[data-edition="worldpride"] .date-card:nth-child(5n),
-body[data-edition="worldpride"] .event-card:nth-child(5n) {
+body[data-edition="event"] .date-card:nth-child(5n),
+body[data-edition="event"] .event-card:nth-child(5n) {
   border-top-color: #ce8969;
 }
 
-body[data-edition="worldpride"] .event-card .rating {
+body[data-edition="event"] .event-card .rating {
   color: var(--rose);
 }
 
-body[data-edition="worldpride"] .source-card {
+body[data-edition="event"] .source-card {
   border-top-color: var(--blue);
 }
 
@@ -1117,6 +1125,7 @@ body[data-edition="worldpride"] .source-card {
 
   .card-grid,
   .neighborhood-grid,
+  .month-grid,
   .route-grid,
   .practical-list,
   .official-grid {

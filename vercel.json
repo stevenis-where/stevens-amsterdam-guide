@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/events/worldpride-2026/:path*",
+      "destination": "/",
+      "permanent": false
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -11,4 +18,3 @@
     }
   ]
 }
-

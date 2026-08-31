@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <title>[Event Name] - Steven's Amsterdam</title>
+    <meta name="description" content="[Short event-edition description.]">
+    <meta name="theme-color" content="#074755">
+    <link rel="stylesheet" href="../../assets/styles.css">
+  </head>
+  <body data-page="event" data-edition="event" data-events-url="../../data/[event-slug]-events.csv">
+    <a class="skip-link" href="#calendar">Skip to calendar</a>
+    <header class="site-header">
+      <div class="header-main">
+        <a class="wordmark" href="../../" aria-label="Steven's Amsterdam home">Steven's <span>Amsterdam</span></a>
+        <nav class="guide-nav" aria-label="Choose a guide">
+          <a href="../../">City Guide</a>
+          <a href="./" aria-current="page">[Event Name]</a>
+        </nav>
+        <div class="header-actions">
+          <button class="icon-button" id="saved-toggle" type="button" title="Show saved events" aria-label="Show saved events">
+            <i data-lucide="bookmark"></i>
+            <span id="saved-count">0</span>
+          </button>
+          <button class="icon-button menu-toggle" id="menu-toggle" type="button" title="Open menu" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+      <nav class="section-nav" aria-label="On this page">
+        <span class="section-nav-label">On this page</span>
+        <a href="#frame">Start Here</a>
+        <a href="#official">Official Dates</a>
+        <a href="#best-bets">Best Bets</a>
+        <a href="#calendar">Calendar</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero event-hero" aria-label="[Hero image description]">
+        <div class="hero-scrim"></div>
+        <div class="hero-content">
+          <p class="eyebrow">[Dates and edition context]</p>
+          <h1>[Event Name]</h1>
+          <p class="hero-copy">[One direct paragraph on what this edition helps readers decide.]</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#best-bets">Best bets</a>
+            <a class="button secondary" href="#calendar">Full calendar</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section event-frame" id="frame">
+        <div class="section-heading">
+          <p class="eyebrow">How to use this page</p>
+          <h2>[Decision-led heading.]</h2>
+        </div>
+        <div class="practical-list">
+          <article>
+            <h3>Book</h3>
+            <p>[Scarce-ticket priority.]</p>
+          </article>
+          <article>
+            <h3>Check details</h3>
+            <p>[What must be verified before committing.]</p>
+          </article>
+          <article>
+            <h3>Go</h3>
+            <p>[How this edition works alongside the city guide.]</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section official" id="official">
+        <div class="section-heading">
+          <p class="eyebrow">Official anchors</p>
+          <h2>[Key dates heading.]</h2>
+        </div>
+        <div class="date-timeline" aria-label="Key event dates"></div>
+        <div class="official-grid"></div>
+      </section>
+
+      <section class="section best-bets" id="best-bets">
+        <div class="section-heading compact">
+          <p class="eyebrow">Best bets</p>
+          <h2>[Taste-led picks heading.]</h2>
+          <p>[Short editorial criterion.]</p>
+        </div>
+        <div class="pick-groups" id="event-picks"></div>
+      </section>
+
+      <section class="section calendar" id="calendar">
+        <div class="section-heading compact">
+          <p class="eyebrow">Full calendar</p>
+          <h2>[All events]</h2>
+          <p>Choose a date first, then narrow by type, audience, area, saved events, or score.</p>
+        </div>
+        <div class="filter-bar event-filter-bar" aria-label="Event filters">
+          <label class="select-label" for="event-date-filter"><span>Date</span><select id="event-date-filter"><option value="all">Any date</option></select></label>
+          <label class="select-label" for="event-period-filter"><span>Period</span><select id="event-period-filter"><option value="all">All periods</option></select></label>
+          <label class="select-label" for="event-area-filter"><span>Area</span><select id="event-area-filter"><option value="all">All areas</option></select></label>
+          <label class="select-label" for="event-type-filter"><span>Event type</span><select id="event-type-filter"><option value="all">All event types</option></select></label>
+          <label class="select-label" for="event-audience-filter"><span>Audience</span><select id="event-audience-filter"><option value="all">All audiences</option></select></label>
+          <label class="select-label" for="event-confidence-filter"><span>Verification</span><select id="event-confidence-filter"><option value="all">All verification</option></select></label>
+          <label class="select-label event-search-label" for="event-search"><span>Search</span><input id="event-search" type="search" placeholder="Event or venue"></label>
+          <div class="chip-row" id="event-priority-filters" aria-label="Priority filters">
+            <button class="chip active" type="button" data-event-priority="all" aria-pressed="true">All</button>
+            <button class="chip" type="button" data-event-priority="steven" aria-pressed="false">Steven's picks</button>
+            <button class="chip" type="button" data-event-priority="saved" aria-pressed="false">Saved</button>
+            <button class="chip" type="button" data-score-filter="8" aria-pressed="false">Score 8+</button>
+          </div>
+          <button class="icon-button filter-reset" id="clear-event-filters" type="button" title="Clear filters" aria-label="Clear filters"><i data-lucide="rotate-ccw"></i></button>
+        </div>
+        <div class="results-line"><span id="event-results" role="status" aria-live="polite">Loading events...</span></div>
+        <div class="card-grid event-grid" id="event-grid"></div>
+        <p class="empty-state" id="event-empty" hidden>No events match those filters.</p>
+        <button class="button more-button" id="show-all-events" type="button" aria-expanded="false" hidden>Show all events</button>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Steven's Amsterdam - [Event Name].</p>
+      <p>Last checked [date]. Recheck details before booking.</p>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="../../assets/app.js"></script>
+  </body>
+</html>

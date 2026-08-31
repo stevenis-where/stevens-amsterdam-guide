@@ -243,15 +243,6 @@ window.CITY_PLACES = [
     query: "Flying Dutchmen Cocktails Amsterdam"
   },
   {
-    id: "vesper",
-    name: "Vesper",
-    area: "Centrum & Jordaan",
-    type: "Cocktails",
-    categories: ["drink"],
-    note: "A small Jordaan cocktail classic, best when the night wants to stay low-key but good.",
-    query: "Vesper Bar Amsterdam"
-  },
-  {
     id: "bar-mokum",
     name: "Bar Mokum",
     area: "De Pijp",
@@ -392,7 +383,7 @@ window.CITY_PLACES = [
     area: "West & Westerpark",
     type: "Club",
     categories: ["night", "queer"],
-    note: "A key Pride-period and queer-scene venue; treat event listing and ticket timing as essential.",
+    note: "A key queer-scene venue for its remaining 2026 run; treat event listing and ticket timing as essential.",
     query: "Tilla Tec Amsterdam"
   },
   {
@@ -695,11 +686,9 @@ window.CITY_PLACES = [
     area: "West & Westerpark",
     type: "Social sauna",
     categories: ["wellness", "queer"],
-    note: "The west-side social sauna option. If you are still in Amsterdam, Queer Sauna Club is here on Tuesday 28 July 2026.",
+    note: "The west-side social sauna option: useful when a busy Amsterdam week needs heat, recovery, and a more social reset.",
     query: "Badhus Sauna West Noordzijde 41 Amsterdam",
-    mapUrl: "https://maps.app.goo.gl/7eDDZWh1P588eJ7w8?g_st=ic",
-    infoUrl: "https://www.instagram.com/queersaunaclub/",
-    infoLabel: "QSC"
+    mapUrl: "https://maps.app.goo.gl/7eDDZWh1P588eJ7w8?g_st=ic"
   },
   {
     id: "brothers-niemeijer",
@@ -880,7 +869,6 @@ const stevenPreferredUpdates = {
 const culledPlaceIds = new Set([
   "foodhallen",
   "de-japanner",
-  "vesper",
   "flying-dutchmen",
   "bar-mokum",
   "dutch-courage",

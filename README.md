@@ -1,11 +1,10 @@
 # Steven's Amsterdam
 
-A personal Amsterdam city guide and a companion edition for WorldPride 2026.
+A personal Amsterdam city guide.
 
 ## Routes
 
 - `/` - Steven's Amsterdam city guide
-- `/events/worldpride-2026/` - Amsterdam WorldPride 2026
 
 The static site is structured to support future event editions at `/events/{event-slug}/`. It is public and link-shareable, but asks search engines not to index or archive it through page metadata, `robots.txt`, and Vercel response headers.
 
