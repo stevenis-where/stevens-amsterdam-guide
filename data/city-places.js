@@ -81,15 +81,6 @@ window.CITY_PLACES = [
     query: "Badhuis Javaplein 21 Amsterdam"
   },
   {
-    id: "foodhallen",
-    name: "Foodhallen",
-    area: "Oud-West & De Baarsjes",
-    type: "Casual food",
-    categories: ["eat"],
-    note: "Useful with mixed groups, early evenings, or visitors who need choice without a formal booking.",
-    query: "Foodhallen Amsterdam"
-  },
-  {
     id: "de-japanner",
     name: "De Japanner",
     area: "Oud-West & De Baarsjes",
@@ -144,6 +135,17 @@ window.CITY_PLACES = [
     query: "Cafe Caron Amsterdam"
   },
   {
+    id: "parea",
+    name: "Parea",
+    area: "De Pijp",
+    type: "Greek sticks bar",
+    categories: ["eat", "drink"],
+    note: "Greek sticks, wood-fired flatbreads, and enough wine-bar looseness to make De Pijp dinner feel like a plan rather than an obligation.",
+    query: "Parea Eerste van der Helststraat 59-61 Amsterdam",
+    infoUrl: "https://www.parea.amsterdam/",
+    infoLabel: "Parea"
+  },
+  {
     id: "de-kas",
     name: "De Kas",
     area: "Oost",
@@ -160,6 +162,17 @@ window.CITY_PLACES = [
     categories: ["eat", "wine"],
     note: "A contemporary Oost dinner option for people who care about food but do not want a tourist script.",
     query: "Troef Amsterdam"
+  },
+  {
+    id: "wils-cafe",
+    name: "Wils Café",
+    area: "Oost",
+    type: "All-day bistro / wine",
+    categories: ["coffee", "eat", "wine", "drink"],
+    note: "Joris Bijdendijk's new Weesperzijde room for coffee, a quick lunch, wine, or dinner. The point is the all-day rhythm, not another formal occasion meal.",
+    query: "Wils Cafe Weesperzijde 147 Amsterdam",
+    infoUrl: "https://www.wilscafe.nl/",
+    infoLabel: "Wils Café"
   },
   {
     id: "choux",
@@ -867,7 +880,6 @@ const stevenPreferredUpdates = {
 };
 
 const culledPlaceIds = new Set([
-  "foodhallen",
   "de-japanner",
   "flying-dutchmen",
   "bar-mokum",
