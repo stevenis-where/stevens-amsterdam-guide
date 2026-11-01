@@ -9,6 +9,16 @@
       "source": "/events/worldpride-2026/:path*",
       "destination": "/",
       "permanent": false
+    },
+    {
+      "source": "/events/ade-2026/",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/events/ade-2026/:path*",
+      "destination": "/",
+      "permanent": false
     }
   ],
   "headers": [
